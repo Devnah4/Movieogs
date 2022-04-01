@@ -1,9 +1,9 @@
 var searchBtn = document.querySelector("#searchButton")
-var moviePhoto = document.querySelector("#image")
-var titleBox = document.querySelector("#title")
-var descriptionBox = document.querySelector("#description")
+// var moviePhoto = document.querySelector("#image")
+// var titleBox = document.querySelector("#title")
+// var descriptionBox = document.querySelector("#description")
 var searchMovie = document.querySelector("#userSearch")
-
+var infoBox = document.querySelector('#infoBox')
 
 searchBtn.addEventListener("click", function (){
     var userInput = searchMovie.value
@@ -17,27 +17,32 @@ searchBtn.addEventListener("click", function (){
     })
     .then(function (data) {
         var results  = data.results;
-        debugger
-        for (var i = 0; i < data.length; i++){
+        //console.log(JSON.stringify(data)) 
+        console.log(data)
+
+
+        for (var i = 0; i < results.length; i++){
         
-        console.log(results);
+            console.log(results);
 
-        var tilteUrl = document.createElement('h2');
-        var descriptionUrl = document.createElement('p')
+            
+            var tilteUrl = document.createElement('h2');
+            var descriptionUrl = document.createElement('p')
+            var image = document.createElement('img')
 
-        descriptionUrl.textContent = results[i].description
-        tilteUrl.textContent = results[i].title;
+            descriptionUrl.textContent = results[i].description
+            tilteUrl.textContent = results[i].title;
 
-        descriptionBox.append(descriptionUrl)
-        titleBox.append(tilteUrl);
+            image.src = results[i].image
 
-        console.log(tilteUrl)
-        console.log(descriptionUrl)
-        
-        
-        // var image = document.createElement('img')
-        // image.src = results[0].image
-        // document.getElementById('image').append(image);
+            infoBox.appendChild(descriptionUrl)
+            infoBox.appendChild(tilteUrl);
+            infoBox.appendChild(image)
+            
+            // console.log(tilteUrl)
+            // console.log(descriptionUrl)
+                
+            //document.getElementById('image').append(image);
     }        
     });
 
