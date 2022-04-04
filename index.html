@@ -1,20 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- style links -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/material.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/material.min.css"> -->
+
 <title>MoviesOGs</title>
 </head>
 <body>
 
-<h1>Search for a Title</h1>
-<input id = "userSearch" placeholder="Enter a Movie title" > </input>
-<button id ="searchButton"> Here to Search</button>
 
-<div id="infoBox">
+
+    <!-- <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner" id="infoBox">
+          <div class="mdc-layout-grid__cell">1</div>
+            <h3 id="title">Title</h3>
+            <p id="description">description</p>
+            <a id="image"></a>
+
+          <div class="mdc-layout-grid__cell">2</div>
+            <h3 id="title">Title</h3>
+            <p id="description">description</p>
+            <a id="image"></a>
+          
+          <div class="mdc-layout-grid__cell">3</div>
+            <h3 id="title">Title</h3>
+            <p id="description">description</p>
+            <a id="image"></a>
+        </div>
+      </div> -->
+
+
+
+
+
+
+<h1>Search for a Title</h1>
+<input class="mdc-text-field mdc-text-field--outlined" type="text" id = "userSearch" placeholder="Enter a Movie title"></input>
+<button class="mdc-button mdc-button--outlined" id ="searchButton"><span class="mdc-button__ripple"></span> Here to Search</button>
+
+
+
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner mdc-layout-grid--fixed-column-width" id="infoBox">
+      <div class="mdc-layout-grid__cell">
+        <h3 id="title"></h3>
+        <p id="description"></p>
+        <a id="image"></a>
+      <!-- </div>
+      <div class="mdc-layout-grid__cell">
+        <h3 id="title"></h3>
+        <p id="description"></p>
+        <a id="image"></a>
+      </div>
+      <div class="mdc-layout-grid__cell">
+        <h3 id="title"></h3>
+        <p id="description"></p>
+        <a id="image"></a> -->
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- <div id="infoBox">
     <h3 id = "title"> Title</h3>
     <p id="description">Decription</p>
     <a id ="image"></a>
-</div>
+</div> -->
 
+
+
+
+
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/13.0.0/material-components-web.min.js"></script>
 <script src="./assets/js/script.js"> </script>
 </body>
 

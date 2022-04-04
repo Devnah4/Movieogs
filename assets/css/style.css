@@ -1,3 +1,25 @@
-img {
-    width: 150px;
-}
+@material/floating-label/mdc-floating-label";
+@material/line-ripple/mdc-line-ripple";
+@material/notched-outline/mdc-notched-outline";
+@material/textfield";
+@material/layout-grid/mdc-layout-grid";
+
+textfield.core-styles
+
+
+
+/* a id {
+    height: 50px;
+    width: 50px;
+} */
+
+/* .button {
+    color: gray;
+} */
+
+
+
+
+.mdc-layout-grid__cell {   
+    @include mdc-layout-grid('desktop', 2, 10px);
+  }
