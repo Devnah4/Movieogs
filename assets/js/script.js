@@ -49,4 +49,3 @@ searchBtn.addEventListener("click", function (){
     console.log(searchBtn)
 })
 
-// testing push -khai hello 
