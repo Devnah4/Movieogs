@@ -18,7 +18,10 @@
     - decided what it will do and how it will be used on the site
     - lay down css to have a starting point
     - 
-
+    - fetch second api
+        - buy or get rating
+        -pass to displayBuy function
+        - displayBuy will generate results to document
 
 
     - ashley 
@@ -36,7 +39,7 @@
     - khai
         -js 
         -   fix function displayInfo
-        -   
+        -   - limit to 6
 
 
 ````

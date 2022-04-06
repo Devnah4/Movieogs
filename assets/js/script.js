@@ -11,6 +11,9 @@ searchBtn.addEventListener("click", function (){
     var userInput = searchMovie.value
     console.log(userInput)
 
+    //reload page
+    //location.reload();
+
     //call api fun
     fetchApi(userInput);
 
@@ -103,23 +106,23 @@ function fetchApi(userInput){
 // display 
 function displaySearch(results){
     console.log("inside display search function");
-
-    for (var i = 0; i < results.length; i++){
+    console.log(results);
+    for (var i = 0; i < 6; i++){
         
-        console.log(results);
-
 
         var movieItem ={
             title: results[i].title,
             description: results[i].description,
             image: results[i].image,
-        }      
-        
-        document.getElementById("infoBox").innerHTML = 
-            `<div class="card">
-                <h2>${movieItem.title}</h2>
-                <p>${movieItem.description}</p>
-                <img src=${movieItem.image}></img>
+        };   
+      
+        document.getElementById("infoBox-" + i ).innerHTML = 
+            `<div class ="card" style="width: 18rem;">
+                <div class ="card-body">
+                    <img class ="card-img-top" src=${movieItem.image}></img>
+                    <h5 class ="card-title">${movieItem.title}</h5>
+                    <p class ="card-text">${movieItem.description}</p>
+                </div>
             </div>`;
  
 }  
