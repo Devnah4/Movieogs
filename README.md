@@ -32,14 +32,15 @@
     - martin
         - js
             -hero section /css
+            - made icon
 
     - binh
         - find second api ( buying )
         - look for search api
     - khai
         -js 
-        -   fix function displayInfo
-        -   - limit to 6
+        -   fix function displayInfo * fixed
+        -   - limit to 6 *done
 
 
 ````
