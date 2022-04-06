@@ -17,43 +17,6 @@ searchBtn.addEventListener("click", function (){
     //call api fun
     fetchApi(userInput);
 
-    // var requestUrl =
-    // "https://imdb-api.com/en/API/SearchTitle/k_2zr46be6/" + userInput;
-
-    // fetch(requestUrl)
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (data) {
-    //     var results  = data.results;
-       
-    //     console.log(data)
-
-
-    //     for (var i = 0; i < results.length; i++){
-        
-    //         console.log(results);
-
-            
-    //         var tilteUrl = document.createElement('h2');
-    //         var descriptionUrl = document.createElement('p')
-    //         var image = document.createElement('img')
-
-    //         descriptionUrl.textContent = results[i].description
-    //         tilteUrl.textContent = results[i].title;
-
-    //         image.src = results[i].image
-
-    //         infoBox.appendChild(descriptionUrl)
-    //         infoBox.appendChild(tilteUrl);
-    //         infoBox.appendChild(image)
-            
-    //         // console.log(tilteUrl)
-    //         // console.log(descriptionUrl)
-                
-    //         //document.getElementById('image').append(image);
-    // }        
-    // });
 })
 
 
@@ -71,31 +34,8 @@ function fetchApi(userInput){
     })
     .then(function (data) {
         console.log(data) // testing
-        
         var results  = data.results;
-        
         displaySearch(results);
-
-    //     for (var i = 0; i < results.length; i++){
-        
-    //         console.log(results);
-
-            
-    //         var tilteUrl = document.createElement('h2');
-    //         var descriptionUrl = document.createElement('p')
-    //         var image = document.createElement('img')
-
-    //         descriptionUrl.textContent = results[i].description
-    //         tilteUrl.textContent = results[i].title;
-
-    //         image.src = results[i].image
-
-    //         infoBox.appendChild(descriptionUrl)
-    //         infoBox.appendChild(tilteUrl);
-    //         infoBox.appendChild(image)
-                
-    // }  
-
     });
 
 
@@ -107,6 +47,8 @@ function fetchApi(userInput){
 function displaySearch(results){
     console.log("inside display search function");
     console.log(results);
+
+    
     for (var i = 0; i < 6; i++){
         
 
