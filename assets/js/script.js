@@ -33,9 +33,9 @@ searchBtn.addEventListener("click", function () {
             console.log(videoInfo);
             for (var i=0; i < 6; i++) {
                 // Youtube Elements
-                trailer.src = 'https://www.youtube.com/watch?v=&output=embed' + videoInfo.videoId;
-                trailer.style.width = "200px";
+                trailer.src = 'https://www.youtube.com/embed/' + videoInfo.videoId;
                 trailer.style.width = "350px";
+                trailer.style.height = "200px";
                 // Trailer Append
                 infoBox.appendChild(trailer);
                 }
