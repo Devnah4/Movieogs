@@ -36,9 +36,10 @@ function fetchApi(userInput){
         console.log(data) // testing
         var results  = data.results;
         displaySearch(results);
+
+        // do second fetch for youtube trailer
+
     });
-
-
 
 }
 
@@ -48,7 +49,7 @@ function displaySearch(results){
     console.log("inside display search function");
     console.log(results);
 
-    
+
     for (var i = 0; i < 6; i++){
         
 
@@ -56,7 +57,13 @@ function displaySearch(results){
             title: results[i].title,
             description: results[i].description,
             image: results[i].image,
+            movieId: results[i].id,
         };   
+
+        // currenty does not get url passed back from function.
+        var video = getTrailer(movieItem.movieId);
+        console.log(" video url in loop " + video);
+
       
         document.getElementById("infoBox-" + i ).innerHTML = 
             `<div class ="card" style="width: 18rem;">
@@ -71,7 +78,26 @@ function displaySearch(results){
 
 }; // end displaySearch
 
-// display shopping results/ amazon/ best buy
-function displayBuy(data){
+// get trailer link by fetching from api
+// needs which array to look for when passing in the data
+function getTrailer(movieId){
+
+    var requestUrl2 = "https://imdb-api.com/en/API/YouTubeTrailer/k_a7if4qo5/" + movieId;
+
+    fetch(requestUrl2)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        
+        var video = data.videoUrl 
+        console.log(video);
+        
+
+    });
+
+
 
 }
+
+// getTrailer("tt1375666");
