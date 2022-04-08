@@ -47,7 +47,7 @@ function displaySearch(results) {
       title: results[i].title,
       description: results[i].description,
       image: results[i].image,
-      movieId: results[i].id,
+      link: results[i].id,
     };
 
   // display info to page 
@@ -58,6 +58,7 @@ function displaySearch(results) {
                   <img class ="card-img-top" src=${movieItem.image}></img>
                   <h6 class ="card-title">${movieItem.title}</h5>
                   <p class ="card-text">${movieItem.description}</p>
+                  <a href ="https://www.imdb.com/title/${movieItem.link}" class="card-link" target ="_blank">Click here for more info!</a>
               </div>
           </div>`;
 
