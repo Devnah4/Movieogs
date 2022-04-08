@@ -61,40 +61,9 @@ function displaySearch(results) {
               </div>
           </div>`;
 
-   // getTrailer(i, movieItem.movieId);
-
-
   }
 } // end displaySearch
 
-// get trailer link by fetching from api
-// needs which array to look for when passing in the data
-// function getTrailer(i, movieId) {
-//   var requestUrl2 =
-//     "https://imdb-api.com/en/API/YouTubeTrailer/k_a7if4qo5/" + movieId;
-//   console.log(requestUrl2);
 
-//   fetch(requestUrl2).then(function (response) {
-//     response.json().then(function (data) {
-//       console.log(data);
-
-//       console.log(data.videoId);
-//     // pass i and videoId to display function
-//       displayTrailer(i,data.videoId);
-
-//     });
-//   });
-  
-// }
-
-
-// function displayTrailer(i,id){
-
-//  var video = id;
-
-//     document.getElementById("infoVideo-" + i ).innerHTML =`
-//         <iframe class ="card-img-bottom width="350" height="300" src="https://www.youtube.com/embed/${video}" title="YouTube video player" frameborder="0"</iframe>
-//         `
-// }
 
 
