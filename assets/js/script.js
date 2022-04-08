@@ -1,11 +1,13 @@
-var searchBtn = document.querySelector("#movieBtn");
+var movieBtn = document.querySelector("#movie-button");
+var bookBtn = document.querySelector('#book-button');
 var searchMovie = document.querySelector("#userSearch");
 var infoBox = document.querySelector('#infoBox');
-var heroImage = document.querySelector('#hero-img')
+var heroImage = document.querySelector('#hero-img');
+var googleApi = 'AIzaSyAH7Ftu1pU975MStP0M3ev6DEiGQqSkzF0';
 
-searchBtn.addEventListener("click", function () {
-    var userInput = searchMovie.value;
-    var requestUrl = "https://imdb-api.com/en/API/SearchTitle/k_2zr46be6/" + userInput;
+movieBtn.addEventListener("click", function () {
+    var movieInput = searchMovie.value;
+    var requestUrl = "https://imdb-api.com/en/API/SearchTitle/k_2zr46be6/" + movieInput;
     infoBox.innerHTML = '';
     // heroImage.style.display = 'none';
     fetch(requestUrl)
@@ -49,6 +51,53 @@ searchBtn.addEventListener("click", function () {
         }        
     });
     
+})
+
+
+bookBtn.addEventListener("click", function () {
+    var bookInput = searchMovie.value;
+    infoBox.innerHTML = '';
+    console.log(searchMovie.value);
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${bookInput}:keyes&key=${googleApi}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        var results = data.items;
+        console.log(data);
+        for (var i = 0; i < 6; i++) {
+
+        var bookContainer = document.createElement('article');
+        var titleUrl = document.createElement('h2');
+        var descriptionUrl = document.createElement('p');
+        var image = document.createElement('img');
+        var link = document.createElement('a');
+
+        // Description Elements
+        descriptionUrl.textContent = results[i].volumeInfo.description;
+        descriptionUrl.className = 'description';
+        // Title Elements
+        titleUrl.textContent = results[i].volumeInfo.title;
+        titleUrl.className = 'titles';
+        // Image Elements
+        image.src = results[i].volumeInfo.imageLinks.thumbnail;
+        image.className = 'image-infoBox';
+        image.style.width = "200px";
+        image.style.height = "350px";
+        // Link to IMDB
+        link.href = results[i].saleInfo.buyLink;
+        link.innerHTML = 'Click here for more!';
+        link.className = 'linkInfo';
+        link.target = '_blank'
+
+        // Create the Elements
+        bookContainer.appendChild(image);
+        bookContainer.appendChild(titleUrl);
+        bookContainer.appendChild(descriptionUrl);
+        bookContainer.appendChild(link);
+        infoBox.appendChild(bookContainer);
+        }
+    })
 })
 
 // function youtubeTrailer (titleId) {
