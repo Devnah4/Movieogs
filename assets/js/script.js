@@ -56,7 +56,7 @@ function displaySearch(results) {
   ).innerHTML = `<div class ="card" style="width: 18rem;">
               <div class ="card-body">
                   <img class ="card-img-top" src=${movieItem.image}></img>
-                  <h5 class ="card-title">${movieItem.title}</h5>
+                  <h6 class ="card-title">${movieItem.title}</h5>
                   <p class ="card-text">${movieItem.description}</p>
               </div>
           </div>`;
