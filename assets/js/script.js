@@ -8,6 +8,7 @@ var imdbApi = 'k_2zr46be6';
 // gets user movie input, passes to fetch api function
 searchBtn.addEventListener("click", function () {
   var userInput = searchMovie.value;
+
  // infoBox.innerHTML = '';
   //call movie api function
   fetchApi(userInput);
@@ -22,7 +23,7 @@ searchBook.addEventListener("click",function(){
 })
 
 
-// will get api's and call the right functions within
+//get  movie api's and call the right functions within
 function fetchApi(userInput) {
     // clear old document
    
@@ -40,14 +41,13 @@ function fetchApi(userInput) {
       displaySearch(results);
         
       // do second fetch for youtube trailer
-    })
-    .catch(function(error){
-        alert("Error. Please enter a valid search")
     });
+   
 }
 
-// display
+// display movie results
 function displaySearch(results) {
+
   console.log("inside display search function");
   console.log(results);
 
@@ -56,16 +56,16 @@ function displaySearch(results) {
       title: results[i].title,
       description: results[i].description,
       image: results[i].image,
-      link: results[i].id,
+      link: results[i].id
     };
 
   // display info to page 
   document.getElementById(
     "infoBox-" + i
-  ).innerHTML = `<div class ="card" style="width: 18rem;">
-              <div class ="card-body">
+  ).innerHTML = `<div class ="card" >
+              <div class ="card-body text-center">
                   <img class ="card-img-top" src=${movieItem.image}></img>
-                  <h6 class ="card-title">${movieItem.title}</h5>
+                  <h5 class ="card-title">${movieItem.title}</h5>
                   <p class ="card-text">${movieItem.description}</p>
                   <a href ="https://www.imdb.com/title/${movieItem.link}" class="card-link" target ="_blank">Click here for more info!</a>
               </div>
@@ -86,13 +86,11 @@ function fetchBookApi(userInput){
         var results = data.items;
         console.log(data);
        displayBook(results);
-    })
-    .catch(function(error){
-        alert("Error. Please enter a valid search")
     });
+   
 };
 
-// fix items
+// display book results to page
 function displayBook(results){
 
     for (var i = 0; i < 6; i++) {
@@ -106,15 +104,17 @@ function displayBook(results){
       // display info to page 
       document.getElementById(
         "infoBox-" + i
-      ).innerHTML = `<div class ="card" style="width: 18rem;">
+      ).innerHTML = `<div class ="card">
                   <div class ="card-body">
                       <img class ="card-img-top" src=${bookItem.image}></img>
-                      <h6 class ="card-title">${bookItem.title}</h5>
+                      <h5 class ="card-title">${bookItem.title}</h5>
                       <p class ="card-text">${bookItem.description}</p>
                       <a href ="${bookItem.link}" class="card-link" target ="_blank">Click here for more info!</a>
                   </div>
               </div>`;
     
       }
-}
+};
+
+
 

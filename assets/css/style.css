@@ -37,3 +37,23 @@ img:hover {
 p {
     font-size: smaller;
 }
+
+
+/* card style  */
+
+.card{
+    width: 20rem;
+    border-radius: 10%;
+    box-shadow: 1px;
+}
+.card-body{
+background-color: var(--omega);
+}
+
+.card-title{
+
+}
+.card-text{
+    color: var(--alpha);
+
+}
