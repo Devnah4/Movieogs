@@ -20,7 +20,7 @@ img {
     max-height: 364.55px;
 }
 
-img:hover {
+.card:hover {
     box-shadow: var(--omega);
   }
 
@@ -51,8 +51,10 @@ background-color: var(--omega);
 }
 
 .card-title{
+    font-size: small;
+      font-weight: bold;
+  }
 
-}
 .card-text{
     color: var(--alpha);
 
