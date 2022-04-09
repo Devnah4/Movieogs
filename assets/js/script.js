@@ -7,6 +7,7 @@ var imdbApi = 'k_2zr46be6';
 
 // gets user movie input, passes to fetch api function
 searchBtn.addEventListener("click", function () {
+    
   var userInput = searchMovie.value;
 
  // infoBox.innerHTML = '';
