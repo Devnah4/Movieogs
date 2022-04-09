@@ -12,16 +12,24 @@
 </head>
 <body>
 
-<h1>Search for a Title</h1>
-<input id = "userSearch" placeholder="Enter a Movie title"> </input>
-<button class="btn btn-info" id ="searchButton">Search for Movie</button>
-<button class="btn btn-info" id ="searchBook">Search for Book</button>
+<!-- search container -->
+
+<div class="container my-4 ">
+    <form class="form-inline justify-content-md-center">
+        <h1 class="mr-2">Search for a Title</h1>
+        <input class="form-control mr-2" id = "userSearch" placeholder="Enter a Movie title"> </input>
+        <button class="btn btn-info mr-2" id ="searchButton">Search for Movie</button>
+        <button class="btn btn-info mr-2" id ="searchBook">Search for Book</button>
+    </form>
+</div>
+
+
 
  <!-- container for search results -->
 <div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-6"id="infoBox-0">
-            <div class ="card" >
+    <div class="row justify-content-md-center">
+        <div class="infoBox col-sm-auto col-md-auto col-lg-auto"id="infoBox-0">
+            <div class ="card m-2" >
                 <div class ="card-body text-center">
                     <img class ="card-img-top" src="./assets/images/david-choemummy.jpeg"></img>
                     <h5 class ="card-title">Movie title here</h5>
@@ -30,18 +38,36 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-6" id="infoBox-1">
-            <div class ="card" >
+        <div class="infoBox col-sm-auto col-md-auto col-lg-auto" id="infoBox-1">
+            <div class ="card m-2" >
                 <div class ="card-body text-center">
                     <img class ="card-img-top" src="./assets/images/david-choemummy.jpeg"></img>
                     <h5 class ="card-title">Movie title here</h5>
-                    <p class ="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore voluptatum dolore excepturi quod .</p>
+                    <p class ="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore voluptatum dolore excepturi quod Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cupiditate aperiam cumque quam tenetur corporis provident assumenda alias, expedita distinctio veritatis eligendi odit similique, id asperiores explicabo rem doloribus nesciunt. .</p>
                     <a href ="https://www.imdb.com/title/Jeen-yuhs: A Kanye Trilogy" class="card-link" target ="_blank">Click here for more info!</a>
                 </div>
             </div>
         </div>
-        <div id="infoBox-2"></div>
-        <div id="infoBox-3"></div>
+        <div class="infoBox col-sm-auto col-md-auto col-lg-auto" id="infoBox-2">
+            <div class ="card m-2" >
+                <div class ="card-body text-center">
+                    <img class ="card-img-top" src="./assets/images/david-choemummy.jpeg"></img>
+                    <h5 class ="card-title">Movie title here</h5>
+                    <p class ="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore voluptatum dolore excepturi quod Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cupiditate aperiam cumque quam tenetur corporis provident assumenda alias, expedita distinctio veritatis eligendi odit similique, id asperiores explicabo rem doloribus nesciunt. .</p>
+                    <a href ="https://www.imdb.com/title/Jeen-yuhs: A Kanye Trilogy" class="card-link" target ="_blank">Click here for more info!</a>
+                </div>
+            </div>
+        </div>
+        <div class="infoBox col-sm-auto col-md-auto col-lg-auto" id="infoBox-3">
+            <div class ="card m-2" >
+                <div class ="card-body text-center">
+                    <img class ="card-img-top" src="./assets/images/david-choemummy.jpeg"></img>
+                    <h5 class ="card-title">Movie title here</h5>
+                    <p class ="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi inventore voluptatum dolore excepturi quod Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cupiditate aperiam cumque quam tenetur corporis provident assumenda alias, expedita distinctio veritatis eligendi odit similique, id asperiores explicabo rem doloribus nesciunt. .</p>
+                    <a href ="https://www.imdb.com/title/Jeen-yuhs: A Kanye Trilogy" class="card-link" target ="_blank">Click here for more info!</a>
+                </div>
+            </div>
+        </div>
         <div id="infoBox-4"></div>
         <div id="infoBox-5"></div>
     </div>

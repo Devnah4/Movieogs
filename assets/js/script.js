@@ -62,7 +62,7 @@ function displaySearch(results) {
   // display info to page 
   document.getElementById(
     "infoBox-" + i
-  ).innerHTML = `<div class ="card" >
+  ).innerHTML = `<div class ="card m-2" >
               <div class ="card-body text-center">
                   <img class ="card-img-top" src=${movieItem.image}></img>
                   <h5 class ="card-title">${movieItem.title}</h5>
@@ -104,8 +104,8 @@ function displayBook(results){
       // display info to page 
       document.getElementById(
         "infoBox-" + i
-      ).innerHTML = `<div class ="card">
-                  <div class ="card-body">
+      ).innerHTML = `<div class ="card m-2">
+                  <div class ="card-body text-center">
                       <img class ="card-img-top" src=${bookItem.image}></img>
                       <h5 class ="card-title">${bookItem.title}</h5>
                       <p class ="card-text">${bookItem.description}</p>
