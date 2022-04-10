@@ -1,46 +1,30 @@
 # Movieogs
 
-# Deployed 
+## Purpose
+A function to look for both book searches and Imbd movie information. Is there a superhero movie you're interested in discovering some inner details? A book you're wanting to get the details on? Feel free to test out Movieogs.
 
-# Functions
-- Search Imdb for movie info
-- Pulls data for title, image, and description
-- displays wheter product can be purchased on bestbuy
+## Built With (currently)
+* HTML
+* CSS
+* Javascript
 
-# Screenshot
+## Website
+<a href="https://devnah4.github.io/Movieogs/"><img src="https://i.imgur.com/55RH9yw.jpg"></a>
+<br>
+<br>
+<a href="https://devnah4.github.io/Movieogs/"><img src="https://i.imgur.com/bsnOb1z.jpg"></a>
+<br>
+<br>
+* Click image to go to website.
 
+## Contribution
+Made with ♥ by...
 
-
-
-````
--ToDo:
-    - git second API
-    - decided what it will do and how it will be used on the site
-    - lay down css to have a starting point
-    - 
-    - fetch second api
-        - buy or get rating
-        -pass to displayBuy function
-        - displayBuy will generate results to document
-
-
-    - ashley 
-        - css frame work
-        - cards?
-        - readme file
-
-    - martin
-        - js
-            -hero section /css
-            - made icon
-
-    - binh
-        - find second api ( buying )
-        - look for search api
-    - khai
-        -js 
-        -   fix function displayInfo * fixed
-        -   - limit to 6 *done
-
-
-````
+* Martin 
+<a href="https://github.com/Devnah4/Portfolio">Click for Martin's portfolio!</a>
+* Khai Truong
+<a href="https://teatyped.github.io/Portfolio/">Click for Khai's portfolio!</a>
+* Binh Ta
+<a href="https://user-images.githubusercontent.com/99286749/156958609-c221f72e-35f0-454b-a9b3-2dc34f4bbd67.png">Click for Binh's portfolio!</a>
+* Ashley Waters
+ <a href="https://aishels.github.io/potential-enigma/">Click for Ashley's portfolio!</a>
